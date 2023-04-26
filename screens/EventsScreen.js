@@ -26,36 +26,29 @@ const EventsScreen = () => {
               className="h-20 w-20 mr-32"
             />
           </View>
-          <View className="items-center">
+          <View className="items-center top-8">
             <Text className="text-white text-3xl font-extrabold uppercase mt-3 mb-1">
-              January Dates
+              March Dates
             </Text>
             <Text className="text-white text-base mb-7 underline">
               Beginner & Rueda Classes
             </Text>
             <Text className="text-white m-5 font-bold text-lg">
-              04/01/23 - Kings X - 7:30pm-8:30pm
+              01/03/23 - Kings X - 7:30pm-8:30pm
             </Text>
             <Text className="text-white m-5 font-bold text-lg">
-              11/01/23 - Kings X - 7:30pm-8:30pm
+              15/03/23 - Kings X - 7:30pm-8:30pm
             </Text>
             <Text className="text-white m-5 font-bold text-lg">
-              18/01/23 - Kings X - 7:30pm-8:30pm
+              22/03/23 - Kings X - 7:30pm-8:30pm
             </Text>
             <Text className="text-white m-5 font-bold text-lg">
-              25/01/23 - Kings X - 7:30pm-8:30pm
+              29/03/23 - Kings X - 7:30pm-8:30pm
             </Text>
             <Text className="text-[#daa520] text-sm font-semibold">
               FREE Social after every class, 8:30pm - late
             </Text>
           </View>
-          <TouchableOpacity className="flex-row space-x-2 items-center mt-20 ml-32">
-            <View>
-              <Text className="text-white">View Full Calendar</Text>
-              <Text className="text-white uppercase">Click Here</Text>
-            </View>
-            <CalendarIcon color="white" />
-          </TouchableOpacity>
         </SafeAreaView>
       </ImageBackground>
     </View>

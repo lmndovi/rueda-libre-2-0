@@ -8,11 +8,15 @@ import EventsScreen from "./screens/EventsScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ClassLandingScreen from "./screens/ClassLandingScreen";
 import AboutScreen from "./screens/AboutScreen";
+import { Bars3Icon } from "react-native-heroicons/outline";
+import { useNavigation } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const DrawerNavigator = () => {
+  const navigation = useNavigation();
+
   return (
     <Drawer.Navigator>
       <Drawer.Screen

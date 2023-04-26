@@ -1,0 +1,7 @@
+ My First Product
+    prodduct_id: prod_NeRdPTdPGDaSc5
+    price_id: price_1Mt8q9JBzGorYhtOOiwNuLnh
+
+ Wednesday classes
+    product_id: prod_NeS0E9GQ03zU23
+    price_id: price_1Mt96uJBzGorYhtOyLLiSLNQ

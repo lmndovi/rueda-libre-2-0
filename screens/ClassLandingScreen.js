@@ -2,6 +2,7 @@ import { View, Text, ImageBackground, SafeAreaView, Image } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import { HomeIcon } from "react-native-heroicons/solid";
 
 const ClassLandingScreen = () => {
   const navigation = useNavigation();
@@ -68,8 +69,18 @@ const ClassLandingScreen = () => {
             </TouchableOpacity>
             <View className="bottom-[20px]">
               <Text className="text-[#daa520] text-sm font-semibold mt-9">
-                Click class for videos
+                Click class for demo
               </Text>
+            </View>
+            <View className="top-[80px]">
+              <TouchableOpacity
+                className="bg-white  rounded-full h-12 w-12 items-center justify-center"
+                onPress={() => {
+                  navigation.navigate("Home");
+                }}
+              >
+                <HomeIcon size={24} color="#800000" />
+              </TouchableOpacity>
             </View>
           </View>
         </SafeAreaView>
