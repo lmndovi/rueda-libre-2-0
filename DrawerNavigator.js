@@ -3,12 +3,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import BasicClassScreen from "./screens/BasicClassScreen";
 import IntroClassScreen from "./screens/IntroClassScreen";
 import PlusClassScreen from "./screens/PlusClassScreen";
-import PaymentScreen from "./screens/PaymentScreen";
 import EventsScreen from "./screens/EventsScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ClassLandingScreen from "./screens/ClassLandingScreen";
 import AboutScreen from "./screens/AboutScreen";
-import { Bars3Icon } from "react-native-heroicons/outline";
 import { useNavigation } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
@@ -46,15 +44,7 @@ const DrawerNavigator = () => {
           headerTitleStyle: { color: "#00162d" },
         }}
       />
-      <Drawer.Screen
-        name="Payment"
-        component={PaymentScreen}
-        options={{
-          headerTransparent: true,
-          headerTintColor: "#fff",
-          headerTitleStyle: { color: "#00162d" },
-        }}
-      />
+
       <Drawer.Screen
         name="Classes"
         component={ClassesStack}
