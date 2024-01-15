@@ -1,12 +1,12 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createStackNavigator } from "@react-navigation/stack";
-import BasicClassScreen from "./screens/BasicClassScreen";
-import IntroClassScreen from "./screens/IntroClassScreen";
-import PlusClassScreen from "./screens/PlusClassScreen";
-import EventsScreen from "./screens/EventsScreen";
-import HomeScreen from "./screens/HomeScreen";
-import ClassLandingScreen from "./screens/ClassLandingScreen";
-import AboutScreen from "./screens/AboutScreen";
+import BasicClassScreen from "../screens/BasicClassScreen";
+import IntroClassScreen from "../screens/IntroClassScreen";
+import PlusClassScreen from "../screens/PlusClassScreen";
+import EventsScreen from "../screens/EventsScreen";
+import HomeScreen from "../screens/HomeScreen";
+import ClassLandingScreen from "../screens/ClassLandingScreen";
+import AboutScreen from "../screens/AboutScreen";
 import { useNavigation } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();

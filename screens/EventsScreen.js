@@ -5,13 +5,25 @@ import {
   SafeAreaView,
   ImageBackground,
   Image,
+  Modal,
 } from "react-native";
-import React from "react";
 import { CalendarIcon } from "react-native-heroicons/solid";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import EventCalendar from "../components/EventCalendar";
 
 const EventsScreen = () => {
   const navigation = useNavigation();
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [isCalendarVisible, setCalendarVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
+  const toggleCalendar = () => {
+    setCalendarVisible(!isCalendarVisible);
+  };
 
   return (
     <View>
@@ -33,22 +45,44 @@ const EventsScreen = () => {
             <Text className="text-white text-base mb-7 underline">
               Beginner & Rueda Classes
             </Text>
-            <Text className="text-white m-5 font-bold text-lg">
-              01/03/23 - Kings X - 7:30pm-8:30pm
-            </Text>
-            <Text className="text-white m-5 font-bold text-lg">
-              15/03/23 - Kings X - 7:30pm-8:30pm
-            </Text>
-            <Text className="text-white m-5 font-bold text-lg">
-              22/03/23 - Kings X - 7:30pm-8:30pm
-            </Text>
-            <Text className="text-white m-5 font-bold text-lg">
-              29/03/23 - Kings X - 7:30pm-8:30pm
-            </Text>
+            <TouchableOpacity className="">
+              <Text className="text-white m-5 font-bold text-lg">
+                08/03/23 - Kings X - 7:30pm-8:30pm
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity className="">
+              <Text className="text-white m-5 font-bold text-lg">
+                15/03/23 - Kings X - 7:30pm-8:30pm
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="">
+              <Text className="text-white m-5 font-bold text-lg">
+                22/03/23 - Kings X - 7:30pm-8:30pm
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="">
+              <Text className="text-white m-5 font-bold text-lg">
+                29/03/23 - Kings X - 7:30pm-8:30pm
+              </Text>
+            </TouchableOpacity>
             <Text className="text-[#daa520] text-sm font-semibold">
               FREE Social after every class, 8:30pm - late
             </Text>
           </View>
+          <TouchableOpacity
+            className="relative flex flex-row items-center justify-center -bottom-12 bg-[#fff] px-3 py-2 rounded-2xl space-x-2 shadow-md border-2 border-gray-600"
+            onPress={() => {
+              toggleModal();
+              toggleCalendar();
+            }}
+          >
+            <Text className="text-lg ">Full Calendar</Text>
+            <CalendarIcon height={20} width={20} color="black" />
+          </TouchableOpacity>
+          {/* <View className="w-full h-full">
+            <EventCalendar />
+          </View> */}
         </SafeAreaView>
       </ImageBackground>
     </View>
