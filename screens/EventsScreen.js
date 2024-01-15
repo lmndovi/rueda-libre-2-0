@@ -80,9 +80,32 @@ const EventsScreen = () => {
             <Text className="text-lg ">Full Calendar</Text>
             <CalendarIcon height={20} width={20} color="black" />
           </TouchableOpacity>
-          {/* <View className="w-full h-full">
-            <EventCalendar />
-          </View> */}
+
+          {/* Modal */}
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={isModalVisible}
+            onRequestClose={toggleModal}
+          >
+            <View>
+              <View>
+                {/* Event Calendar in full */}
+                <View className="h-[700px] w-full">
+                  {isCalendarVisible && <EventCalendar />}
+                </View>
+                <TouchableOpacity
+                  className=" flex flex-row items-center justify-center bg-[#fff] px-3 py-2 rounded-2xl space-x-2 shadow-md border-2 border-gray-600"
+                  onPress={() => {
+                    toggleModal();
+                    toggleCalendar();
+                  }}
+                >
+                  <Text className="text-lg">Close</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </Modal>
         </SafeAreaView>
       </ImageBackground>
     </View>
